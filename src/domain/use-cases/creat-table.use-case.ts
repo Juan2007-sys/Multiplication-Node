@@ -1,0 +1,28 @@
+
+export interface CreateTableuseCase{
+    excute: ( options: CreateTableOptions) => string;
+}
+
+export interface CreateTableOptions{
+    base: number;
+    limit?: number;
+}
+
+
+export class Createtable implements CreateTableuseCase {
+    constructor(
+        /**
+         * DI - Dependency Injection
+         */
+    ){}
+
+    excute( {base, limit = 10}: CreateTableOptions ): string {
+        let outputMessage = '';
+        for (let i = 1; i <= limit; i++){
+        outputMessage += `${base} x ${i} = ${base * i}\n`;
+        }
+       return outputMessage; 
+
+    }
+
+}
