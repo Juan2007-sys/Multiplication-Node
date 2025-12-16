@@ -3,6 +3,7 @@
   "include": ["src/**/*"],
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
+    
     // File Layout
     "rootDir": "src",
     "outDir": "dist/",
@@ -11,7 +12,7 @@
     // See also https://aka.ms/tsconfig/module
     "module": "commonjs",
     "target": "es2020",
-    "types": ["node"],
+    "types": ["node", "jest"],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
